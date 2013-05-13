@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      template="/template/layout.xhtml"> 
+
+    
+            <p:menubar autoSubmenuDisplay="true">
+                <p:submenu label="Загрузка" icon="ui-icon-document">
+                    <p:submenu label="Приоритетная" icon="ui-icon-contact">
+                        <p:menuitem value="Выбрать базу" url="#" />
+                        <p:menuitem value="Выбрать учреждение" url="#" />
+                        <p:menuitem value="Выбрать регион" url="#" />
+                    </p:submenu>
+                    <p:menuitem value="Фоновая" url="#" update="txt_count" />
+                    <p:menuitem value="Выход" url="#" />
+                </p:submenu>
+        
+                <p:submenu label="Вид" icon="ui-icon-pencil">
+                    <p:menuitem value="ПСПОО" url="#" icon="ui-icon-arrowreturnthick-1-w" helpText="CTRL+Z"></p:menuitem>
+                    <p:menuitem value="ГИС" url="#" icon="ui-icon-arrowreturnthick-1-e" helpText="CTRL+Y"></p:menuitem>
+                </p:submenu>
+        
+                <p:submenu label="О программе" icon="ui-icon-help">
+                    <p:menuitem value="Документация" url="/about.xhtml" icon="ui-icon-search" ></p:menuitem>
+                    <p:menuitem value="О программе" url="#" update="growl1" icon="ui-icon-help" actionListener="#{growlBean.save}" ></p:menuitem>
+                </p:submenu>
+            </p:menubar>
+    
+</html>
