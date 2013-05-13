@@ -31,10 +31,10 @@
         </h:head>
 
         <h:body>
-           <p:growl id="growl" showDetail="true" sticky="true" />  
+            <p:growl id="growl" showDetail="true" sticky="true" />  
 
             <p:layout fullPage="true" >
-                
+
                 <p:layoutUnit id="top" position="north" size="50" >
                     <ui:insert name="top" >
                         <ui:include src="top.xhtml"/>
@@ -47,18 +47,18 @@
                     </ui:insert>
                 </p:layoutUnit>
 
-                <p:layoutUnit id="left" position="west" size="300" resizable="true" closable="true" collapsible="true" header="ПСПОО" minSize="200">
-                    <ui:insert name="left" >
+                <ui:insert name="left" >
+                    <p:layoutUnit id="left" position="west" size="300" resizable="true" closable="true" collapsible="true" header="ПСПОО" minSize="200">
                         <ui:include src="left.xhtml"/>
-                    </ui:insert>
-                </p:layoutUnit>
+                    </p:layoutUnit>
+                </ui:insert>
 
-                <p:layoutUnit id="right" position="east" size="250" header="ГИС" resizable="true" closable="true" collapsible="true"
-                              style="text-align:center">
-                    <ui:insert name="right" >
+                <ui:insert name="right" >
+                    <p:layoutUnit id="right" position="east" size="250" header="ГИС" resizable="true" closable="true" collapsible="true"
+                                  style="text-align:center">
                         <ui:include src="right.xhtml"/>
-                    </ui:insert>
-                </p:layoutUnit>
+                    </p:layoutUnit>
+                </ui:insert>
 
                 <p:layoutUnit id="center" position="center">
                     <ui:insert name="center" >
