@@ -9,25 +9,45 @@
     <h:form>  
 
         <p:toolbar>  
+
+            <!--        <p:submenu label="Загрузка" icon="ui-icon-document">-->
+
+            <!--            <p:submenu label="Приоритетная" icon="ui-icon-contact">
+                            <p:menuitem value="Выбрать базу..." url="#" />
+                            <p:menuitem value="Выбрать учреждение" url="#" />
+                            <p:menuitem value="Выбрать регион" url="#" />
+                        </p:submenu>
+                        <p:menuitem value="Фоновая" url="#" update="txt_count" />-->
+
+            <!--        </p:submenu>-->
+
+            <!--            <p:toolbarGroup align="left" >  
+                            <p:menuButton value="Загрузка" >  
+                                <p:menuitem value="Выбрать базу..." url="#" />
+                                <p:menuitem value="Выбрать учреждение" url="#" />
+                                <p:menuitem value="Выбрать регион" url="#" />  
+            
+                                <p:submenu label="Вид" icon="ui-icon-pencil">
+                                    <p:menuitem value="ПСПОО" url="#" icon="ui-icon-arrowreturnthick-1-w" onclick="layoutWdgt.toggle('west')"></p:menuitem>
+                                    <p:menuitem value="ГИС" url="#" icon="ui-icon-arrowreturnthick-1-e" onclick="layoutWdgt.toggle('east')"></p:menuitem>
+                                </p:submenu>
+                            </p:menuButton>  
+                        </p:toolbarGroup>  
+                        <p:separator />  -->
+
             <p:toolbarGroup align="left">  
-                <p:commandButton type="button" value="New" icon="ui-icon-document" />  
-                <p:commandButton type="button" value="Open" icon="ui-icon-folder-open" onclick="layoutWdgt.toggle('right')"/>  
+                <h:outputText value="Приоритетная закачка: " />
 
                 <p:separator />  
 
-                <p:commandButton type="button" title="Старт" icon="ui-icon-disk" />  
-                <p:commandButton type="button" title="Стоп" icon="ui-icon-trash" />  
-                <p:commandButton type="button" title="Пауза" icon="ui-icon-print" />  
-            </p:toolbarGroup>  
+                <p:commandButton type="button" value="Новая" icon="ui-icon-document" />  
 
-            <p:toolbarGroup align="right">  
-                <p:menuButton value="Options">  
-                    <p:menuitem value="Home" url="" />  
-                    <p:menuitem value="ShowCase"  
-                                url="http://www.primefaces.org/showcase" />  
-                    <p:menuitem value="TouchFaces"  
-                                url="http://www.primefaces.org/showcase/touch" />  
-                </p:menuButton>  
+                <p:separator />  
+
+                <p:commandButton type="button" title="Старт" icon="ui-icon-play" />  
+                <p:commandButton type="button" title="Стоп" icon="ui-icon-stop" />  
+                <p:commandButton type="button" title="Удалить" icon="ui-icon-pause" />  
+
             </p:toolbarGroup>  
 
         </p:toolbar>  
@@ -35,8 +55,13 @@
 
 
         <h:outputText value="Приоритетная закачка: стоп" />
-        <br></br>
-        <h:outputText value="Фоновая закачка: стоп" />
+        <br />
+        <br />
+        <h:outputText value="Очередь закачки" />
+        <br />
+        <br />
+
+
 
         <!--        <p:accordionPanel>
                     <p:tab title="Статистика закачек">
@@ -47,6 +72,27 @@
                         <h:outputText value="Прогресс" />
                     </p:tab>
                 </p:accordionPanel>-->
+
+
+
+        <p:toolbar>  
+
+
+            <p:toolbarGroup align="left">  
+                <h:outputText value="Фоновая загрузка: " />
+
+                <p:separator />  
+
+                <p:commandButton type="button" title="Старт" icon="ui-icon-play" />  
+                <p:commandButton type="button" title="Стоп" icon="ui-icon-stop" />  
+
+
+            </p:toolbarGroup>  
+
+        </p:toolbar>  
+
+        <h:outputText value="Фоновая закачка: стоп" />
+
 
     </h:form>  
 
