@@ -5,49 +5,50 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:p="http://primefaces.org/ui"> 
 
-    
-        <h:form>  
+
+    <h:form>  
+
+        <p:toolbar>  
+            <p:toolbarGroup align="left">  
+                <p:commandButton type="button" value="New" icon="ui-icon-document" />  
+                <p:commandButton type="button" value="Open" icon="ui-icon-folder-open" onclick="layoutWdgt.toggle('right')"/>  
+
+                <p:separator />  
+
+                <p:commandButton type="button" title="Старт" icon="ui-icon-disk" />  
+                <p:commandButton type="button" title="Стоп" icon="ui-icon-trash" />  
+                <p:commandButton type="button" title="Пауза" icon="ui-icon-print" />  
+            </p:toolbarGroup>  
+
+            <p:toolbarGroup align="right">  
+                <p:menuButton value="Options">  
+                    <p:menuitem value="Home" url="" />  
+                    <p:menuitem value="ShowCase"  
+                                url="http://www.primefaces.org/showcase" />  
+                    <p:menuitem value="TouchFaces"  
+                                url="http://www.primefaces.org/showcase/touch" />  
+                </p:menuButton>  
+            </p:toolbarGroup>  
+
+        </p:toolbar>  
 
 
-            <p:toolbar>  
-                <p:toolbarGroup align="left">  
-                    <p:commandButton type="button" value="New" icon="ui-icon-document" />  
-                    <p:commandButton type="button" value="Open" icon="ui-icon-folder-open"/>  
 
-                    <p:separator />  
+        <h:outputText value="Приоритетная закачка: стоп" />
+        <br></br>
+        <h:outputText value="Фоновая закачка: стоп" />
 
-                    <p:commandButton type="button" title="Старт" icon="ui-icon-disk" />  
-                    <p:commandButton type="button" title="Стоп" icon="ui-icon-trash" />  
-                    <p:commandButton type="button" title="Пауза" icon="ui-icon-print" />  
-                </p:toolbarGroup>  
+        <!--        <p:accordionPanel>
+                    <p:tab title="Статистика закачек">
+                        <h:outputText value="Пока не придулал" />
+                    </p:tab>
+        
+                    <p:tab title="Текущее состояние">
+                        <h:outputText value="Прогресс" />
+                    </p:tab>
+                </p:accordionPanel>-->
 
-                <p:toolbarGroup align="right">  
-                    <p:menuButton value="Options">  
-                        <p:menuitem value="Home" url="" />  
-                        <p:menuitem value="ShowCase"  
-                                    url="http://www.primefaces.org/showcase" />  
-                        <p:menuitem value="TouchFaces"  
-                                    url="http://www.primefaces.org/showcase/touch" />  
-                    </p:menuButton>  
-                </p:toolbarGroup>  
-
-            </p:toolbar>  
-
-            <h:outputText value="Приоритетная закачка: стоп" />
-            <br></br>
-            <h:outputText value="Фоновая закачка: стоп" />
-
-            <p:accordionPanel>
-                <p:tab title="Статистика закачек">
-                    <h:outputText value="Пока не придулал" />
-                </p:tab>
-
-                <p:tab title="Текущее состояние">
-                    <h:outputText value="Прогресс" />
-                </p:tab>
-            </p:accordionPanel>
-
-        </h:form>  
+    </h:form>  
 
 
 </html>
