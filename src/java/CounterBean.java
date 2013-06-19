@@ -5,7 +5,7 @@ import javax.faces.bean.SessionScoped;
 
 /**
  *
- * @author BirkovAY
+ * @author BirkovAY 
  */
 @ManagedBean(name="counterBean",eager=true)
 @SessionScoped
